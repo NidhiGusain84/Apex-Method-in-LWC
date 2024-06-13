@@ -1,8 +1,8 @@
 <template>
     <lightning-card title="Search Account Component">
         <lightning-input label="Search Account" type="search" onchange={handleChange}></lightning-input>
-        <template lwc:if={accounts.data}>
-            <template for:each={accounts.data} for:item="acc">
+        <template lwc:if={accounts}>
+            <template for:each={accounts} for:item="acc">
                <lightning-layout vertical-align="center" key={acc.Id}>
                 <li>
                     {acc.Name}
